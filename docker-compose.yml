@@ -1,0 +1,21 @@
+version: '3'
+ 
+services:
+  tvheadend:
+    build: .
+    image: servercontainers/tvheadend
+    restart: always
+    privileged: true
+    volumes:
+      - tvheadend/hts:/home/hts/.hts
+      - tvheadend/recordings:/home/hts/recordings
+      - tvheadend/timeshift:/home/hts/timeshift
+    ports:
+      - "9981:9981"
+      - "9982:9982"
+    networks:
+      - tvheadend
+ 
+networks:
+  tvheadend:
+    driver: bridge
