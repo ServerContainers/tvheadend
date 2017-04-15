@@ -3,7 +3,6 @@ FROM debian:jessie
 ENV LANG C.UTF-8
 
 RUN export DEBIAN_FRONTEND=noninteractive \
- \
  && apt-get -q -y update \
  && apt-get -q -y install build-essential \
                           wget \
