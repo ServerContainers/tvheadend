@@ -21,7 +21,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
                           dvb-apps \
                           cmake \
                           python \
-                          git
+                          git \
  \
  && apt-get -q -y clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
