@@ -54,4 +54,4 @@ COPY scripts /usr/local/bin/
 HEALTHCHECK CMD ["docker-healthcheck.sh"]
 ENTRYPOINT ["entrypoint.sh"]
 
-CMD [ "tvheadend" "-C" "-u" "hts" "-g" "video" ]
+CMD [ "tvheadend", "-C", "-u", "hts", "-g", "video" ]
