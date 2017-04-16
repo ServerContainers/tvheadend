@@ -28,7 +28,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && git clone https://github.com/tvheadend/tvheadend.git /opt/tvheadend \
  && echo rm -rf /opt/tvheadend/.git \
  \
- && cd /opt/tvheadend && \
+ && cd /opt/tvheadend \
  && ./configure --prefix=/ \
  && make \
  && make install \
