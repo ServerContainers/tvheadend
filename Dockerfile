@@ -49,5 +49,9 @@ EXPOSE 9981 9982
 # 9981 - HTTP server (web interface)
 # 9982 - HTSP server (Streaming protocol)
 
-COPY entrypoint.sh /usr/local/sbin/entrypoint.sh
-CMD ["entrypoint.sh"]
+COPY scripts /usr/local/bin/
+
+HEALTHCHECK CMD ["docker-healthcheck.sh"]
+ENTRYPOINT ["entrypoint.sh"]
+
+CMD [ "/usr/local/bin/tvheadend" "-C" "-u" "hts" "-g" "video" ]
