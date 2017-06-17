@@ -15,6 +15,7 @@ sleep 10
 /opt/bin/mediaclient -e
 
 echo '>> fixing rights...'
+chmod -R a+rwX /home/hts
 chown -R hts.video /home/hts
 chown -R hts.video /dev/dvb
 
