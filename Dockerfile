@@ -43,7 +43,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && ./sundtek_netinst.sh -easyvdr \
  && rm ./sundtek_netinst.sh
 
-VOLUME ['/home/hts']
+VOLUME ["/home/hts"]
 
 EXPOSE 9981 9982
 # 9981 - HTTP server (web interface)
@@ -54,4 +54,4 @@ COPY scripts /usr/local/bin/
 HEALTHCHECK CMD ["docker-healthcheck.sh"]
 ENTRYPOINT ["entrypoint.sh"]
 
-CMD [ "tvheadend", "-C", "-u", "hts", "-g", "video" ]
+CMD ["tvheadend", "-C", "-u", "hts", "-g", "video"]
