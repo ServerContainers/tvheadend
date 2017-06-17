@@ -1,6 +1,21 @@
 FROM debian:jessie
 
 ENV LANG C.UTF-8
+ENV LANGUAGE C.UTF-8
+ENV LC_ALL C.UTF-8
+
+RUN export DEBIAN_FRONTEND=noninteractive \
+ \
+ && apt-get -q -y update \
+ && apt-get -q -y install locales \
+ && apt-get -q -y clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+ \
+ && locale-gen en_US.UTF-8 en_us \
+ && dpkg-reconfigure locales \
+ && dpkg-reconfigure locales \
+ && locale-gen C.UTF-8 \
+ && /usr/sbin/update-locale LANG=C.UTF-8
 
 RUN export DEBIAN_FRONTEND=noninteractive \
  \
