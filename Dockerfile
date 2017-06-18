@@ -34,6 +34,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
                           libavresample-dev \
                           gettext \
                           dvb-apps \
+                          w-scan \
                           cmake \
                           python \
                           git \
