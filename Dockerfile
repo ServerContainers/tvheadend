@@ -20,7 +20,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 RUN export DEBIAN_FRONTEND=noninteractive \
  \
  && apt-get -q -y update \
- && apt-get -q -y install build-essential \
+ && apt-get -q -y install runit \
+                          build-essential \
                           wget \
  && apt-get -q -y install pkg-config \
                           libssl-dev \
@@ -67,7 +68,5 @@ EXPOSE 9981 9982
 
 COPY scripts /usr/local/bin/
 
-HEALTHCHECK CMD ["docker-healthcheck.sh"]
-ENTRYPOINT ["entrypoint.sh"]
-
-CMD ["tvheadend", "-C", "-u", "hts", "-g", "video"]
+HEALTHCHECK CMD ["/usr/local/bin/docker-healthcheck.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
