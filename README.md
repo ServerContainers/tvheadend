@@ -1,7 +1,9 @@
-# still under construction
+# Docker Tvheadend (servercontainers/tvheadend)
+_maintained by ServerContainers_
 
-# tvheadend
 latest tvheadend - freshly complied from official git repo on debian:jessie
+Sundtek Drivers included! :)
+
 
 # Links
 
