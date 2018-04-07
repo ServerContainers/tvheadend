@@ -33,6 +33,9 @@ RUN export DEBIAN_FRONTEND=noninteractive \
                           libavformat-dev \
                           libswscale-dev \
                           libavresample-dev \
+                          libdvbcsa-dev \
+                          liburiparser-dev \
+                          libpcre3-dev \
                           gettext \
                           dvb-apps \
                           w-scan \
