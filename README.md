@@ -1,9 +1,7 @@
 # Docker Tvheadend (servercontainers/tvheadend)
 _maintained by ServerContainers_
 
-latest tvheadend - freshly complied from official git repo on debian:jessie
-Sundtek Drivers included! :)
-
+latest tvheadend - freshly complied from official git repo on debian:stretch
 
 # Links
 
