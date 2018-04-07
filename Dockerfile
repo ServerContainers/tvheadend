@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 ENV LANG C.UTF-8
 ENV LANGUAGE C.UTF-8
@@ -52,13 +52,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && make install \
  && cd / \
  \
- && adduser --system --ingroup video hts \
- \
- && echo 'Install Sundtek DVB-Driver' \
- && wget http://www.sundtek.de/media/sundtek_netinst.sh \
- && chmod 777 sundtek_netinst.sh \
- && ./sundtek_netinst.sh -easyvdr \
- && rm ./sundtek_netinst.sh
+ && adduser --system --ingroup video hts
 
 VOLUME ["/home/hts"]
 
