@@ -1,7 +1,7 @@
 # Docker Tvheadend (servercontainers/tvheadend)
 _maintained by ServerContainers_
 
-tvheadend on debian:stretch
+tvheadend on debian:jessie
 
 # Links
 
