@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:jessie
 
 ENV LANG C.UTF-8
 ENV LANGUAGE C.UTF-8
