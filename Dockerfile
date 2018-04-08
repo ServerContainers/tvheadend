@@ -7,7 +7,7 @@ ENV LC_ALL C.UTF-8
 RUN export DEBIAN_FRONTEND=noninteractive \
  \
  && apt-get -q -y update \
- && apt-get -q -y install apt-transport-https locales \
+ && apt-get -q -y install apt-transport-https locales gnupg \
  && apt-get -q -y clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
  \
