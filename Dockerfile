@@ -18,7 +18,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && /usr/sbin/update-locale LANG=C.UTF-8
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 \
- && echo "deb https://dl.bintray.com/tvheadend/deb stretch stable" > /etc/apt/sources.list.d/tvheadend.list \
+ && echo "deb https://dl.bintray.com/tvheadend/deb jessie stable" > /etc/apt/sources.list.d/tvheadend.list \
  && export DEBIAN_FRONTEND=noninteractive \
  \
  && apt-get -q -y update \
