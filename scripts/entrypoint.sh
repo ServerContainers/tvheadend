@@ -16,7 +16,7 @@ chown -R hts.video /dev/dvb
 
 echo ">> RUNIT - create services"
 mkdir -p /etc/sv/tvheadend
-echo -e '#!/bin/sh\nexec /bin/tvheadend -C -u hts -g video' > /etc/sv/tvheadend/run
+echo -e '#!/bin/sh\nexec /usr/bin/tvheadend -C -u hts -g video' > /etc/sv/tvheadend/run
 chmod a+x /etc/sv/*/run /etc/sv/*/finish
 
 echo ">> RUNIT - enable services"
