@@ -17,8 +17,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && locale-gen C.UTF-8 \
  && /usr/sbin/update-locale LANG=C.UTF-8
 
-RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 \
- && echo "deb https://dl.bintray.com/tvheadend/deb xenial stable-4.2" | sudo tee /etc/apt/sources.list.d/tvheadend.list \
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 \
+ && echo "deb https://dl.bintray.com/tvheadend/deb xenial stable-4.2" > /etc/apt/sources.list.d/tvheadend.list \
  && export DEBIAN_FRONTEND=noninteractive \
  \
  && apt-get -q -y update \
