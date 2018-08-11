@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 ENV LANG C.UTF-8
 ENV LANGUAGE C.UTF-8
@@ -17,8 +17,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && locale-gen C.UTF-8 \
  && /usr/sbin/update-locale LANG=C.UTF-8
 
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 \
- && echo "deb https://dl.bintray.com/tvheadend/deb jessie stable" > /etc/apt/sources.list.d/tvheadend.list \
+RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61 \
+ && echo "deb https://dl.bintray.com/tvheadend/deb xenial stable-4.2" | sudo tee /etc/apt/sources.list.d/tvheadend.list \
  && export DEBIAN_FRONTEND=noninteractive \
  \
  && apt-get -q -y update \
