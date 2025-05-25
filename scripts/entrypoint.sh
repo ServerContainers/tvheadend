@@ -1,25 +1,32 @@
-#!/bin/bash
+#!/bin/sh
 
 cat <<EOF
 ################################################################################
 
-Welcome to the servercontainers/tvheadend
+Welcome to the ghcr.io/servercontainers/tvheadend
 
 ################################################################################
 
+You'll find this container sourcecode here:
+
+    https://github.com/ServerContainers/tvheadend
+
+The container repository will be updated regularly.
+
+################################################################################
+
+
 EOF
 
-echo '>> fixing rights...'
-chmod -R a+rwX /home/hts
-chown -R hts.video /home/hts
-chown -R hts.video /dev/dvb
+##
+# CONTAINER GENERAL
+##
 
-echo ">> RUNIT - create services"
-mkdir -p /etc/sv/tvheadend
-echo -e '#!/bin/sh\nexec /usr/bin/tvheadend -C -u hts -g video' > /etc/sv/tvheadend/run
-chmod a+x /etc/sv/*/run /etc/sv/*/finish
+# nothing needed...
 
-echo ">> RUNIT - enable services"
-ln -s /etc/sv/tvheadend /etc/service/tvheadend
-
-exec runsvdir -P /etc/service
+##
+# CMD
+##
+echo ">> CMD: exec docker CMD"
+echo "$@"
+exec "$@"

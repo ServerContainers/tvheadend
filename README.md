@@ -1,7 +1,7 @@
 # Docker Tvheadend (servercontainers/tvheadend)
 _maintained by ServerContainers_
 
-tvheadend stable-4.2 on debian:stretch
+tvheadend on alpine linux
 
 # Links
 

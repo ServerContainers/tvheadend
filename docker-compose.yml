@@ -3,7 +3,7 @@ version: '3'
 services:
   tvheadend:
     build: .
-    image: servercontainers/tvheadend
+    image: ghcr.io/servercontainers/tvheadend
     restart: always
     privileged: true
     devices:
