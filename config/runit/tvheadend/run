@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/sbin/postfix start-fg
+exec /usr/bin/tvheadend -C -u tvheadend -g tvheadend
