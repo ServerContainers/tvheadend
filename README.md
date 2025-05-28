@@ -1,7 +1,7 @@
 # Docker Tvheadend (servercontainers/tvheadend)
 _maintained by ServerContainers_
 
-tvheadend on `debian:bookworm` linux
+tvheadend on `debian:bookworm`
 
 # Links
 
