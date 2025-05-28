@@ -1,11 +1,9 @@
 # Docker Tvheadend (servercontainers/tvheadend)
 _maintained by ServerContainers_
 
-tvheadend on alpine linux (includes `tv_grab_file` for xmltv.xml files)
+tvheadend on `debian:bookworm` linux
 
 # Links
-
-* includes: https://github.com/b-jesch/tv_grab_file
 
 * https://tvheadend.org/projects/tvheadend/wiki/AptRepository
 * https://github.com/tvheadend/tvheadend.git

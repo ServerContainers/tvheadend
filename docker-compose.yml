@@ -2,7 +2,7 @@ services:
   tvheadend:
     build: .
     image: ghcr.io/servercontainers/tvheadend
-    restart: always
+    restart: unless-stopped
     privileged: true
     devices:
       - "/dev/dvb/adapter0:/dev/dvb/adapter0"
@@ -15,9 +15,3 @@ services:
     ports:
       - 9981:9981
       - 9982:9982
-    networks:
-      - tvheadend
-
-networks:
-  tvheadend:
-    driver: bridge
