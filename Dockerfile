@@ -5,7 +5,8 @@ ENV PATH="/container/scripts:${PATH}"
 RUN apk add --no-cache \
     runit \
   \
-    tvheadend
+    tvheadend \
+    ffmpeg
 
 # basic for WebUI and streaming
 EXPOSE 9981

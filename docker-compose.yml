@@ -9,9 +9,9 @@ services:
       - "/dev/dvb/adapter1:/dev/dvb/adapter1"
       - "/dev/dvb/adapter2:/dev/dvb/adapter2"
     volumes:
-      - ./tvheadend/hts:/home/hts/.hts
-      - ./tvheadend/recordings:/home/hts/recordings
-      - ./tvheadend/timeshift:/home/hts/timeshift
+      - ./tvheadend/hts:/usr/share/tvheadend/.hts
+      - ./tvheadend/recordings:/usr/share/tvheadend/recordings
+      - ./tvheadend/timeshift:/usr/share/tvheadend/timeshift
     ports:
       - 9981:9981
       - 9982:9982
