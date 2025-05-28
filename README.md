@@ -1,18 +1,11 @@
 # Docker Tvheadend (servercontainers/tvheadend)
 _maintained by ServerContainers_
 
-tvheadend on alpine linux
-
-# Usage
-
-## xmltv import
-
-```
-# inside the container
-cat path/to/xmltv.xml | nc -w 5 -U /usr/share/tvheadend/.hts/tvheadend/epggrab/xmltv.sock
-```
+tvheadend on alpine linux (includes `tv_grab_file` for xmltv.xml files)
 
 # Links
+
+* includes: https://github.com/b-jesch/tv_grab_file
 
 * https://tvheadend.org/projects/tvheadend/wiki/AptRepository
 * https://github.com/tvheadend/tvheadend.git
