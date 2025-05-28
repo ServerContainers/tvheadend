@@ -19,9 +19,10 @@ RUN export DEBIAN_FRONTEND=noninteractive \
  && locale-gen C.UTF-8 \
  && /usr/sbin/update-locale LANG=C.UTF-8
 
+ADD --chmod=755 https://raw.githubusercontent.com/b-jesch/tv_grab_file/master/tv_grab_file /usr/bin/tv_grab_file
 
-RUN curl -1sLf 'https://dl.cloudsmith.io/public/tvheadend/tvheadend/setup.deb.sh' | bash \
- && export DEBIAN_FRONTEND=noninteractive \
+RUN export DEBIAN_FRONTEND=noninteractive \
+ && curl -1sLf 'https://dl.cloudsmith.io/public/tvheadend/tvheadend/setup.deb.sh' | bash \
  \
  && apt-get -q -y update \
  && apt-get -q -y install tvheadend \

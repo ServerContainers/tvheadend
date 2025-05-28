@@ -1,8 +1,7 @@
 # Docker Tvheadend (servercontainers/tvheadend)
 _maintained by ServerContainers_
 
-tvheadend on `debian:bookworm`
-
+tvheadend on `debian:bookworm` (includes `tv_grab_file` for xmltv.xml files)
 # Links
 
 * https://tvheadend.org/projects/tvheadend/wiki/AptRepository
