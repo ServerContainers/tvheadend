@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/bin/tvheadend -C -u tvheadend -g tvheadend
+exec /usr/bin/tvheadend -C
