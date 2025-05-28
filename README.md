@@ -3,6 +3,15 @@ _maintained by ServerContainers_
 
 tvheadend on alpine linux
 
+# Usage
+
+## xmltv import
+
+```
+# inside the container
+cat path/to/xmltv.xml | nc -w 5 -U /usr/share/tvheadend/.hts/tvheadend/epggrab/xmltv.sock
+```
+
 # Links
 
 * https://tvheadend.org/projects/tvheadend/wiki/AptRepository

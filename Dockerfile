@@ -6,7 +6,10 @@ RUN apk add --no-cache \
     runit \
   \
     tvheadend \
-    ffmpeg
+    ffmpeg \
+  \
+    netcat-openbsd
+
 
 # basic for WebUI and streaming
 EXPOSE 9981
