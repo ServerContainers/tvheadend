@@ -9,6 +9,7 @@ services:
       - "/dev/dvb/adapter1:/dev/dvb/adapter1"
       - "/dev/dvb/adapter2:/dev/dvb/adapter2"
     volumes:
+      - ./tvheadend/xmltv:/root/.xmltv
       - ./tvheadend/hts:/root/.hts
       - ./tvheadend/recordings:/root/recordings
       - ./tvheadend/timeshift:/root/timeshift
